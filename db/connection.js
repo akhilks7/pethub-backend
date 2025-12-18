@@ -1,0 +1,9 @@
+const mongoose =require("mongoose")
+
+const connectionstring =process.env.DATABASE
+
+mongoose.connect(connectionstring).then(res=>{
+    console.log(`mongodb connected sucessfully`);
+}).catch(err=>{
+    console.log(`error connecting due to ${err}`);
+})
