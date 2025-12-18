@@ -1,6 +1,10 @@
 const mongoose = require("mongoose")
 
 const PetSchema = new mongoose.Schema({
+    usermail: {
+        type: String,
+        default:""
+    },
     petname: {
         type: String,
         required: true
