@@ -13,6 +13,10 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    status: {
+        type: String,
+        default: "active"
+    },
     profile: {
         type: String,
         default: ""

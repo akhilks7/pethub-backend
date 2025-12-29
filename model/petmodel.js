@@ -3,19 +3,23 @@ const mongoose = require("mongoose")
 const PetSchema = new mongoose.Schema({
     usermail: {
         type: String,
-        default:""
+        default: ""
     },
     petname: {
         type: String,
-        required: true
+        default: ""
+    },
+    animaltype: {
+        type: String,
+        default: ""
     },
     age: {
         type: String,
-        required: true
+        default: ""
     },
     gender: {
         type: String,
-        required: true
+        default: ""
     },
     location: {
         type: String,
@@ -23,11 +27,11 @@ const PetSchema = new mongoose.Schema({
     },
     breed: {
         type: String,
-        required: true
+        default: ""
     },
     bio: {
         type: String,
-         default: ""
+        default: ""
     },
     identification: {
         type: String,
@@ -37,8 +41,8 @@ const PetSchema = new mongoose.Schema({
         type: String,
         default: ""
     },
-    profile: {
-        type: String,
+    photos: {
+        type: Array,
         default: ""
     },
     imageURL: {
@@ -47,7 +51,11 @@ const PetSchema = new mongoose.Schema({
     },
     status: {
         type: String,
-        default: "pending"
+        default: "active"
+    },
+    petfor: {
+        type: String,
+        default: ""
     },
     broughtby: {
         type: String,
@@ -57,6 +65,23 @@ const PetSchema = new mongoose.Schema({
         type: String,
         default: ""
     },
+    mdate: {
+        type: String,
+        default: ""
+    },
+    vaccinated: {
+        type: String,
+        default: ""
+    },
+    neutered: {
+        type: String,
+        default: ""
+    },
+    condition: {
+        type: String,
+        default: ""
+    },
+
 })
 
 const pets = mongoose.model("pets", PetSchema)

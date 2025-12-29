@@ -5,11 +5,11 @@ const jwtMiddleware = (req, res, next) => {
     const token = req.headers.authorization.split(" ")[1]
     // const token = req.headers.authorization.replace('Bearer ', '')
 
-    console.log(token);
+    // console.log(token);
  
     try {
         const jwtResponse = jwt.verify(token, process.env.JWTsecretkey)
-        console.log(jwtResponse);
+        // console.log(jwtResponse);
         req.payload = jwtResponse.userMail
         next()
 

@@ -6,7 +6,7 @@ const express = require("express")
 
 // 2.USE express
 const pethubserver = express()
-
+ 
 // 3. port
 const port = 3000
 
@@ -24,9 +24,11 @@ pethubserver.use(cors())
 // connecting db
 require("./db/connection")
 
-
 // tell server to convert data to json 
 pethubserver.use(express.json())
+
+
+pethubserver.use("/uploadImages",express.static("./uploadImages"))
 
 // 
 pethubserver.get("/",(req,res)=>{
