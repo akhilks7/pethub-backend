@@ -831,10 +831,10 @@ exports.makesellpetpaymentcontroller = async (req, res) => {
         }]
 
         const session = await stripe.checkout.sessions.create({
-            success_url: 'http://localhost:5173/payment-success',
-            cancel_url: 'http://localhost:5173/payment-error',
-            // success_url: 'https://book-store-frontend-zeta-jade.vercel.app/payment-success',
-            // cancel_url: 'https://book-store-frontend-zeta-jade.vercel.app/payment-error',
+            // success_url: 'http://localhost:5173/payment-success',
+            // cancel_url: 'http://localhost:5173/payment-error',
+            success_url: 'https://petwelfare-frontend.vercel.app/payment-success',
+            cancel_url: 'https://petwelfare-frontend.vercel.app/payment-error',
             line_items: line_items,
             mode: 'payment',
             payment_method_types:["card"]
